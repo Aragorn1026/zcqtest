@@ -30,7 +30,7 @@ public class ZcqtestApplication {
 
 		String url = "http://zcqtest2/getdate2";
 
-		return String.format(restTemplate.getForObject(url,String.class) + ", Hello zcqtest v1 %s! \n", name);
+		return String.format(restTemplate.getForObject(url,String.class) + ", Hello zcqtest v2 %s! \n", name);
 
 	}
 
@@ -39,20 +39,7 @@ public class ZcqtestApplication {
 
 		Date date = new Date() ;
 
-		// 测容错时添加try catch段
-		try{
-			int a = 5;
-			float result = a / b;
-		}catch (Exception e){
-			throw e;
-		}finally {
-			b++;
-			if(b > 4){
-				b = -1;
-			}
-		}
-
-		return String.format(" --> NSF: zcqtest v1: " + date.toString() + " --result: " + b + " --" + " <-- \n");
+		return String.format(" --> NSF: zcqtest v2: " + date.toString() + " --result: " + b + " --" + " <-- \n");
 
 	}
 
